@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Programming Languages in the UK</title>
+    <link rel="stylesheet" href="animatedchart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Most Popular Programming Languages in the UK (2024)</h1>
+        
+
+        <div class="section">
+            <h2>Top Programming Languages</h2>
+            <div class="bar-chart">
+                <div class="bar" data-value="23" style="--value: 23%;" data-label="JavaScript"></div>
+                <div class="bar" data-value="19" style="--value: 19%;" data-label="Python"></div>
+                <div class="bar" data-value="15" style="--value: 15%;" data-label="Java"></div>
+                <div class="bar" data-value="11" style="--value: 11%;" data-label="PHP"></div>
+                <div class="bar" data-value="9" style="--value: 9%;" data-label="C#"></div>
+                <div class="bar" data-value="8" style="--value: 8%;" data-label="TypeScript"></div>
+                <div class="bar" data-value="6" style="--value: 6%;" data-label="C++"></div>
+                <div class="bar" data-value="4" style="--value: 4%;" data-label="Ruby"></div>
+                <div class="bar" data-value="3" style="--value: 3%;" data-label="Swift"></div>
+                <div class="bar" data-value="2" style="--value: 2%;" data-label="Kotlin"></div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>Language Distribution</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+
+        <div class="section">
+            <h2>Trends Over Time</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+    <script src="animatedchart.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+}
+
+
+.bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 350px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 70px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bar:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+}
+
+.bar::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.bar::after {
+    content: attr(data-value) '%';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #555;
+}
+
+.bar {
+    height: 0;
+    animation: growBar 1s forwards;
+}
+
+@keyframes growBar {
+    to {
+        height: var(--value);
+    }
+}
+
+canvas {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}

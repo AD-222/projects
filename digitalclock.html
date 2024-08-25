@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Real Time</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="Sec">00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            let currentTime = new Date();
+            let hours = String(currentTime.getHours()).padStart(2, '0');
+            let minutes = String(currentTime.getMinutes()).padStart(2, '0');
+            let seconds = String(currentTime.getSeconds()).padStart(2, '0');
+
+            hrs.textContent = hours;
+            min.textContent = minutes;
+            Sec.textContent = seconds;
+        }
+
+        // Call the updateClock function initially and every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+<footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 by Aicha </p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

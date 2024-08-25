@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="TaskMNG.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <button id="theme-toggle">🌙</button>
+        </header>
+        <main>
+            <div class="task-input">
+                <input type="text" id="task" placeholder="Add a new task...">
+                <input type="date" id="due-date">
+                <textarea id="notes" placeholder="Add notes..."></textarea>
+                <select id="category">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="urgent">Urgent</option>
+                </select>
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button id="add-task">Add Task</button>
+            </div>
+            <ul id="task-list"></ul>
+        </main>
+    </div>
+    <script src="TaskMNG.js"></script>
+</body>
+</html>
